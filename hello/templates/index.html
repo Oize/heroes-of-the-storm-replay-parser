@@ -1,7 +1,15 @@
 {% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'hello.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/hello.css' %}" />
 
-<h1>Hello!</h1>
+<div id="logo">
+    <div id="heroes_logo">
+        <img src="{% static 'images/heroes_logo.png' %}"/>    
+    </div>
+
+    <div id="text_logo">
+        <h1>Replay Parser project</h1>
+    </div>
+</div>
 
 <p>The webserver is up and running!</p>
 

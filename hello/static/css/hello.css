@@ -1,0 +1,52 @@
+@font-face {
+    font-family: ExoRegular;
+    src: url("../fonts/exo-regular.ttf");
+}
+
+@font-face {
+    font-family: BlizQuadrata;
+    src: url("../fonts/bliz-quadrata.ttf");
+}
+
+@font-face {
+    font-family: PeregrineRegular;
+    src: url("../fonts/peregrine-regular.otf");
+}
+
+body {
+    background: #0D0E13 /*url("images/background.gif") no-repeat right bottom*/;
+}
+
+#logo {
+    text-align: center;
+}
+
+#heroes_logo {
+    width: 500px;
+    height: 130px;
+   /* margin-left: auto;
+    margin-right: auto;    */
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#heroes_logo img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    margin-top: -75px;
+    margin-left: -200px;
+}
+
+#text_logo {
+    display: inline-block;
+    position: relative;    
+   /* margin-left: auto;
+    margin-right: auto; */
+}
+
+#text_logo h1 {
+    color: #00C0FF;
+    font-family: ExoRegular;
+}

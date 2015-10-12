@@ -1,6 +1,19 @@
+html { 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 @font-face {
     font-family: ExoRegular;
     src: url("../fonts/exo-regular.ttf");
+}
+
+@font-face {
+    font-family: ExoBold;
+    src: url("../fonts/exo-bold.ttf");
 }
 
 @font-face {
@@ -13,40 +26,70 @@
     src: url("../fonts/peregrine-regular.otf");
 }
 
-body {
-    background: #0D0E13 /*url("images/background.gif") no-repeat right bottom*/;
+@font-face {
+    font-family: PeregrineBold;
+    src: url("../fonts/peregrine-bold.otf");
 }
 
 #logo {
+    position: fixed;
     text-align: center;
+    z-index: 1;
 }
 
 #heroes_logo {
     width: 500px;
-    height: 130px;
-   /* margin-left: auto;
-    margin-right: auto;    */
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;    
     position: relative;
     overflow: hidden;
-    display: inline-block;
+    text-align: center;
 }
 
 #heroes_logo img {
-    position: absolute;
+    position: relative;
     max-width: 100%;
     height: auto;
-    margin-top: -75px;
-    margin-left: -200px;
+    margin-top: -10%;
 }
 
 #text_logo {
-    display: inline-block;
     position: relative;    
-   /* margin-left: auto;
-    margin-right: auto; */
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 #text_logo h1 {
-    color: #00C0FF;
-    font-family: ExoRegular;
+    color: #143e85;
+    margin-top: -8px;
+    font-family: ExoBold;
+    font-size: 2.5em;
+    -webkit-text-stroke: 1px #B4E4ED;
+}
+
+.form {
+    position: fixed;
+    clear: both;
+    max-width: 25%;
+    width: 15em;
+    height: auto;
+    background: rgba(59, 32, 75, 0.5);   
+    border: 2px solid #143e85;
+    border-radius: 5px;
+    text-align: center;
+    top: 25em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form h2 {
+    color: #143e85;
+    font-family: ExoBold;
+}
+
+.form img {
+    position: relative;
+    height: 4em;
+    width: 4em;
 }

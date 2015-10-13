@@ -2,13 +2,13 @@
 <html>
     <head>
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'api.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/api.css' %}" />
         <meta charset="utf-8">
         <title>Replay Upload</title>   
     </head>
     <body>
         <!-- Upload form. Note enctype attribute! -->
-	<p>Select a <code>*.StormReplay</code> file to analyze.</p>
+    	<h3>Select a StormReplay file</h3>
         <form action="{{ request.build_absolute_uri }}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p><input type="file" id="file" name="file" /></p>
@@ -21,4 +21,4 @@
             <p><input type="submit" value="Upload" /></p>
         </form>
     </body>
-</html> 
+</html>

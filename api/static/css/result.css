@@ -1,0 +1,45 @@
+html { 
+  background: url(../images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: ExoRegular;
+    src: url("../fonts/exo-regular.ttf");
+}
+
+@font-face {
+    font-family: ExoBold;
+    src: url("../fonts/exo-bold.ttf");
+}
+
+@font-face {
+    font-family: BlizQuadrata;
+    src: url("../fonts/bliz-quadrata.ttf");
+}
+
+@font-face {
+    font-family: PeregrineRegular;
+    src: url("../fonts/peregrine-regular.otf");
+}
+
+@font-face {
+    font-family: PeregrineBold;
+    src: url("../fonts/peregrine-bold.otf");
+}
+
+body {
+    margin: 2em;
+    padding: 2em;
+    width: auto;
+    border: 2px solid #00c0ff;
+    border-radius: 5px;
+    background: rgba(59, 32, 75, 0.7);
+    font-family: ExoRegular;
+    color: #00C0FF;
+}
+
+

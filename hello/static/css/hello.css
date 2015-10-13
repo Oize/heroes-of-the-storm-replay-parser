@@ -32,7 +32,7 @@ html {
 }
 
 #logo {
-    position: fixed;
+    position: absolute;
     text-align: center;
     z-index: 1;
 }
@@ -61,7 +61,7 @@ html {
 }
 
 #text_logo h1 {
-    color: #143e85;
+    color: /*#3B204B*/#143e85;
     margin-top: -8px;
     font-family: ExoBold;
     font-size: 2.5em;
@@ -69,27 +69,24 @@ html {
 }
 
 .form {
-    position: fixed;
-    clear: both;
+    position: absolute;
     max-width: 25%;
-    width: 15em;
+    width: auto;
     height: auto;
-    background: rgba(59, 32, 75, 0.5);   
-    border: 2px solid #143e85;
+    background: rgba(59, 32, 75, 0.7);   
+    border: 2px solid #00C0FF;
     border-radius: 5px;
     text-align: center;
-    top: 25em;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 220px;
+    padding: 0% 1% 0% 1%;
 }
 
 .form h2 {
-    color: #143e85;
+    color: #00C0FF;
     font-family: ExoBold;
 }
 
 .form img {
-    position: relative;
     height: 4em;
-    width: 4em;
+    width: 4em
 }

@@ -92,7 +92,8 @@ def debug(request):
             content = json.dumps({
                 'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id,
             })
-        return HttpResponse(content, content_type="application/json")
+	    return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />' + '<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
+        #return HttpResponse(content, content_type="application/json")
 
     return render(request, 'api/file-upload.html', {'all_field_names': allFieldNames})
 
@@ -104,5 +105,7 @@ def getProcessedReplayResult(request):
     if (result.status == 'SUCCESS'):
         indentValue = int(request.GET.get('indent')) if request.GET.has_key('indent') else None
         return HttpResponse(json.dumps({'status':'SUCCESS','data':result.get()},indent=indentValue), content_type="application/json")
-    return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
+    data = 'Pending...'
+    return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/result.css" />' + '<p>Status: ' + data + '</p>', content_type="html")
+#    return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
 

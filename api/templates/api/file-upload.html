@@ -8,7 +8,7 @@
     </head>
     <body>
         <!-- Upload form. Note enctype attribute! -->
-	<p>Select a11 <code>*.StormReplay</code> file to analyze.</p>
+	<p>Select a <code>*.StormReplay</code> file to analyze.</p>
         <form action="{{ request.build_absolute_uri }}" method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <p><input type="file" id="file" name="file" /></p>

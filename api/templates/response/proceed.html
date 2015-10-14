@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/api.css' %}" />
+        <meta charset="utf-8">
+        <title>Redirect page</title>   
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />
+        <a href="{{ url_to_proceed }}">Proceed to results</a>
+    </body>
+</html>

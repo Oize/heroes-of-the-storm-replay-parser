@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import render_to_response
 from django.http import HttpResponse
 
 import requests
@@ -92,7 +93,11 @@ def debug(request):
             content = json.dumps({
                 'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id,
             })
-	    return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />' + '<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
+#        ^_^
+        result_url = request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id
+        return render_to_response('response/proceed.html', {'url_to_proceed': result_url})
+	    #return HttpResponse('<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
+	    #return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />' + '<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
         #return HttpResponse(content, content_type="application/json")
 
     return render(request, 'api/file-upload.html', {'all_field_names': allFieldNames})

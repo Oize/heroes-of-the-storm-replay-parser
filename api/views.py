@@ -78,6 +78,8 @@ def debug(request):
     if request.method == "POST":
         if not request.FILES.has_key('file'):
             content = json.dumps({'error':'Missing "file" parameter with uploaded replay file data'})
+            Result = {'status': 'No file chosen', 'result_url': request.META.get('HTTP_REFERER'), 'url_text': 'Back',}
+            Result_html = 'back.html'
         else:
             replayFile = request.FILES.get('file')
             savedReplayFile = NamedTemporaryFile(delete=False)
@@ -91,11 +93,12 @@ def debug(request):
                     fieldNamesToParse.append(name)
             asyncResult = LocallyStoredReplayParsingTask.delay(savedReplayFileName, fieldNamesToParse)
             content = json.dumps({
-                'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id,
+                'result_url': (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id),
             })
+            Result = {'status': 'Successfully uploaded', 'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id, 'url_text': 'Proceed to result',}
+            Result_html = 'proceed.html'
 #        ^_^
-        result_url = request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id
-        return render_to_response('response/proceed.html', {'url_to_proceed': result_url})
+        return render_to_response('response/' + Result_html, Result)
 	    #return HttpResponse('<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
 	    #return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />' + '<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
         #return HttpResponse(content, content_type="application/json")
@@ -108,9 +111,10 @@ def getProcessedReplayResult(request):
     if (result.status == 'FAILURE'):
         return HttpResponse(json.dumps({'status':'FAILURE','exception':str(result.result)}), content_type="application/json")
     if (result.status == 'SUCCESS'):
-        indentValue = int(request.GET.get('indent')) if request.GET.has_key('indent') else None
-        return HttpResponse(json.dumps({'status':'SUCCESS','data':result.get()},indent=indentValue), content_type="application/json")
-    data = 'Pending...'
-    return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/result.css" />' + '<p>Status: ' + data + '</p>', content_type="html")
-#    return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
+        mapname = result.get()['raw']['details']['m_title']['utf8']
+        players = result.get()['raw']['details']['m_playerList']
+        #indentValue = int(request.GET.get('indent')) if request.GET.has_key('indent') else None
+        return render_to_response('response/result.html' ,{'mapname': mapname, 'players': players})
+        #return HttpResponse(json.dumps({'status':'SUCCESS','data':result.get()}, indent=int(request.GET.get('indent')) if request.GET.has_key('indent') else None), content_type="application/json")
+    return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
 

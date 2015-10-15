@@ -2,23 +2,38 @@
 <html>
     <head>
 	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/api.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
         <meta charset="utf-8">
-        <title>Replay Upload</title>   
+        <title>Match_results</title>   
     </head>
+
     <body>
-        <!-- Upload form. Note enctype attribute! -->
-    	<h3>Select a StormReplay file</h3>
-        <form action="{{ request.build_absolute_uri }}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <p><input type="file" id="file" name="file" /></p>
-            <p><input type="checkbox" name="debug" value="True" /> Debug Mode</p>
-            <ul>
-            {% for name in all_field_names %}
-                <li><input type="checkbox" name="{{ name }}" value="True" /> {{ name }}</li>
-            {% endfor %}
+        <div id="logo">
+            <div id="heroes_logo">
+                <a href="../"><img src="{% static 'images/heroes_logo.png' %}"/></a>
+            </div>
+
+            <div id="text_logo">
+                <h1>ARMORY</h1>
+            </div>
+        </div>
+        <div class="form">
+            <h3>{{ mapname }}</h3>
+            <ul> Team 1
+                <li>{{ players.0.m_name.utf8 }} - {{ players.0.m_hero.utf8 }}</li>
+                <li>{{ players.1.m_name.utf8 }} - {{ players.1.m_hero.utf8 }}</li>
+                <li>{{ players.2.m_name.utf8 }} - {{ players.2.m_hero.utf8 }}</li>
+                <li>{{ players.3.m_name.utf8 }} - {{ players.3.m_hero.utf8 }}</li>
+                <li>{{ players.4.m_name.utf8 }} - {{ players.4.m_hero.utf8 }}</li>
             </ul>
-            <p><input type="submit" value="Upload" /></p>
-        </form>
+            <ul> Team 2
+                <li>{{ players.5.m_name.utf8 }} - {{ players.5.m_hero.utf8 }}</li>
+                <li>{{ players.6.m_name.utf8 }} - {{ players.6.m_hero.utf8 }}</li>
+                <li>{{ players.7.m_name.utf8 }} - {{ players.7.m_hero.utf8 }}</li>
+                <li>{{ players.8.m_name.utf8 }} - {{ players.8.m_hero.utf8 }}</li>
+                <li>{{ players.9.m_name.utf8 }} - {{ players.9.m_hero.utf8 }}</li>
+            </ul>
+            <p>{{ data }}</p>
+        </div>
     </body>
 </html>

@@ -7,18 +7,29 @@
         <title>Replay Upload</title>   
     </head>
     <body>
+        <div id="logo">
+            <div id="heroes_logo">
+                <a href="./"><img src="{% static 'images/heroes_logo.png' %}"/></a>
+            </div>
+
+            <div id="text_logo">
+                <h1>ARMORY</h1>
+            </div>
+        </div>
         <!-- Upload form. Note enctype attribute! -->
-    	<h3>Select a StormReplay file</h3>
-        <form action="{{ request.build_absolute_uri }}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            <p><input type="file" id="file" name="file" /></p>
-            <p><input type="checkbox" name="debug" value="True" /> Debug Mode</p>
-            <ul>
-            {% for name in all_field_names %}
-                <li><input type="checkbox" name="{{ name }}" value="True" /> {{ name }}</li>
-            {% endfor %}
-            </ul>
-            <p><input type="submit" value="Upload" /></p>
-        </form>
+        <div class="form">
+    	    <h3>Select a StormReplay file</h3>
+            <form action="{{ request.build_absolute_uri }}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p><input type="file" id="file" name="file" /></p>
+                <p><input type="checkbox" name="debug" value="True" /> Debug Mode</p>
+                <ul>
+                {% for name in all_field_names %}
+                    <li><input type="checkbox" name="{{ name }}" value="True" /> {{ name }}</li>
+                {% endfor %}
+                </ul>
+                <p><input type="submit" value="Upload" /></p>
+            </form>
+        </div>
     </body>
 </html>

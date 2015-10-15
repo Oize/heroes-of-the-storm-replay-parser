@@ -16,8 +16,8 @@ urlpatterns = patterns('',
     url(r'^api/upload-form$', api.views.uploadToS3Form, name='uploadToS3Form'),
     url(r'^api/process$', api.views.processReplayThatWasUploadedToS3, name='uploadToS3Form'),
     url(r'^api/result$', api.views.getProcessedReplayResult, name='getProcessedReplayResult'),
-    url(r'^api-debug$', api.views.debug, name='apiDebugIndex'),
-    url(r'^api-debug/result$', api.views.getProcessedReplayResult, name='getProcessedReplayResult'),
+    url(r'^api$', api.views.debug, name='apiDebugIndex'),
+    #url(r'^api-debug/result$', api.views.getProcessedReplayResult, name='getProcessedReplayResult'),
 
 
 )

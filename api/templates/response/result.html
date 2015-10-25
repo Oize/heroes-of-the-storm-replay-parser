@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-	{% load staticfiles %}
-	<link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
+	    {% load staticfiles %}
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
         <meta charset="utf-8">
         <title>Match_results</title>   
     </head>
@@ -17,6 +17,9 @@
                 <h1>ARMORY</h1>
             </div>
         </div>
+        {% if players.0.m_hero.utf8 in [hero['name_cyr'] for hero in heroes] %}
+        <p>123123</p>
+        {% endif %}
         <div class="form">
             <h3>{{ mapname }}</h3>
             <ul> Team 1
@@ -33,6 +36,7 @@
                 <li><p>{{ players.8.m_hero.utf8 }}</p><p>{{ players.8.m_name.utf8 }}</p></li>
                 <li><p>{{ players.9.m_hero.utf8 }}</p><p>{{ players.9.m_name.utf8 }}</p></li>
             </ul>
+	
         </div>
     </body>
 </html>

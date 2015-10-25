@@ -7,7 +7,7 @@ import os
 import json
 import datetime
 
-from stormreplay import StormReplayAnalyzer, heroes
+from stormreplay import StormReplayAnalyzer, heroes, battlegrounds
 
 from tasks import LocallyStoredReplayParsingTask
 from tasks import S3StoredReplayParsingTask
@@ -113,10 +113,10 @@ def getProcessedReplayResult(request):
     if (result.status == 'SUCCESS'):
         mapname = result.get()['raw']['details']['m_title']['utf8']
         players = result.get()['raw']['details']['m_playerList']
-        #namesilt = 
-        #maplist = 
+        namelist = [hero['name'] for hero in heroes]
+        maplist = [map['name'] for map in battlegrounds]
         #indentValue = int(request.GET.get('indent')) if request.GET.has_key('indent') else None
-        return render_to_response('response/result.html' ,{'mapname': mapname, 'players': players, 'heroes': heroes, 'battlegrounds': battlegrounds})
+        return render_to_response('response/result.html' ,{'mapname': mapname, 'players': players, 'heroes': heroes, 'battlegrounds': battlegrounds, 'namelist': namelist, 'maplist': maplist})
         #return HttpResponse(json.dumps({'status':'SUCCESS','data':result.get()}, indent=int(request.GET.get('indent')) if request.GET.has_key('indent') else None), content_type="application/json")
     return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
 

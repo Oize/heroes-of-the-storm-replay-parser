@@ -1,5 +1,5 @@
-html { 
-  background: url(../images/background.jpg) no-repeat center center fixed; 
+body {
+  background: url(../images/battlegrounds/battlefieldofeternity.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -9,6 +9,11 @@ html {
 @font-face {
     font-family: ExoRegular;
     src: url("../fonts/exo-regular.ttf");
+}
+
+@font-face {
+    font-family: Exo2Regular;
+    src: url("../fonts/exo2-regular.ttf");
 }
 
 @font-face {
@@ -35,6 +40,8 @@ html {
     position: relative;
     text-align: center;
     z-index: 1;
+/*    left: 50%;
+    transform: translate(-50%)*/
 }
 
 #heroes_logo {
@@ -72,11 +79,61 @@ html {
     margin: 2em;
     padding: 2em;
     width: auto;
-    border: 2px solid #00c0ff;
+/*    border: 2px solid #00c0ff;
     border-radius: 5px;
-    background: rgba(59, 32, 75, 0.7);
-    font-family: ExoRegular;
+    background: rgba(59, 32, 75, 0.7);*/
+    font-family: Exo2Regular;
     color: #00C0FF;
+}
+
+.mapname {
+    font-family: ExoBold;
+    color: #143E85;
+}
+
+.team1 {
+    float: left;
+    width: 47%;
+    border: 1px solid red;
+}
+
+.team1 h3 {
+    text-align: center;
+}
+
+.team2 {
+    float: right;
+    width: 47%;
+    border: 1px solid red;
+}
+
+.team2 h3 {
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    width: 19%;
+    height: 300px;
+    border: 1px solid green;
+    position: relative;
+}
+
+.hero {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.name {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 

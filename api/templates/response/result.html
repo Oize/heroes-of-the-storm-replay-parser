@@ -17,26 +17,30 @@
                 <h1>ARMORY</h1>
             </div>
         </div>
-        {% if players.0.m_hero.utf8 in maplist %}
-        <p>123123</p>
+        {% with hero0='0' hero1='1' hero2='2' hero3='3' hero4='4' hero5='5' hero6='6' hero7='7' hero8='8' hero9='9' %}
+        {% if mapname in maplist %}
+            {% with hero0='d' %}
+            hero0 is {{ hero0 }}
+            {% endwith %}
         {% endif %}
         <div class="form">
-            <h3>{{ mapname }}</h3>
-            <ul> Team 1
-                <li><p>{{ players.0.m_hero.utf8 }}</p><p>{{ players.0.m_name.utf8 }}</p></li>
-                <li><p>{{ players.1.m_hero.utf8 }}</p><p>{{ players.1.m_name.utf8 }}</p></li>
-                <li><p>{{ players.2.m_hero.utf8 }}</p><p>{{ players.2.m_name.utf8 }}</p></li>
-                <li><p>{{ players.3.m_hero.utf8 }}</p><p>{{ players.3.m_name.utf8 }}</p></li>
-                <li><p>{{ players.4.m_hero.utf8 }}</p><p>{{ players.4.m_name.utf8 }}</p></li>
+            <h1 class="mapname">{{ mapname }}</h1>
+            <ul class="team1"> <h3>Team 1</h3>
+                <li><p class="hero" class="">{{ players.0.m_hero.utf8 }}</p><p class="name">{{ players.0.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.1.m_hero.utf8 }}</p><p class="name">{{ players.1.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.2.m_hero.utf8 }}</p><p class="name">{{ players.2.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.3.m_hero.utf8 }}</p><p class="name">{{ players.3.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.4.m_hero.utf8 }}</p><p class="name">{{ players.4.m_name.utf8 }}</p></li>
             </ul>
-            <ul> Team 2
-                <li><p>{{ players.5.m_hero.utf8 }}</p><p>{{ players.5.m_name.utf8 }}</p></li>
-                <li><p>{{ players.6.m_hero.utf8 }}</p><p>{{ players.6.m_name.utf8 }}</p></li>
-                <li><p>{{ players.7.m_hero.utf8 }}</p><p>{{ players.7.m_name.utf8 }}</p></li>
-                <li><p>{{ players.8.m_hero.utf8 }}</p><p>{{ players.8.m_name.utf8 }}</p></li>
-                <li><p>{{ players.9.m_hero.utf8 }}</p><p>{{ players.9.m_name.utf8 }}</p></li>
+            <ul class="team2"> <h3>Team 2</h3>
+                <li><p class="hero">{{ players.5.m_hero.utf8 }}</p><p class="name">{{ players.5.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.6.m_hero.utf8 }}</p><p class="name">{{ players.6.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.7.m_hero.utf8 }}</p><p class="name">{{ players.7.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.8.m_hero.utf8 }}</p><p class="name">{{ players.8.m_name.utf8 }}</p></li>
+                <li><p class="hero">{{ players.9.m_hero.utf8 }}</p><p class="name">{{ players.9.m_name.utf8 }}</p></li>
             </ul>
-	
+            {{ players.9 }}
         </div>
+        {% endwith %}
     </body>
 </html>

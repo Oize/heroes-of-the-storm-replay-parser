@@ -87,10 +87,10 @@ def debug(request):
                 savedReplayFile.write(chunk)
             savedReplayFileName = savedReplayFile.name
             savedReplayFile.close()
-            fieldNamesToParse = []
-            for name in allFieldNames:
-                if bool(request.POST.get(name, False)):
-                    fieldNamesToParse.append(name)
+            fieldNamesToParse = ['RawReplayDetails',]
+#            for name in allFieldNames:
+#                if bool(request.POST.get(name, False)):
+#                    fieldNamesToParse.append(name)
             asyncResult = LocallyStoredReplayParsingTask.delay(savedReplayFileName, fieldNamesToParse)
             content = json.dumps({
                 'result_url': (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id),

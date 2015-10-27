@@ -92,8 +92,10 @@ body {
 }
 
 .team1 {
+    margin-left: -50px;
+    padding: 0px;
     float: left;
-    width: 47%;
+    width: 55%;
     border: 1px solid red;
 }
 
@@ -102,8 +104,10 @@ body {
 }
 
 .team2 {
+    margin-right: -50px;
+    padding: 0px;
     float: right;
-    width: 47%;
+    width: 55%;
     border: 1px solid red;
 }
 
@@ -113,10 +117,11 @@ body {
 
 li {
     display: inline-block;
-    width: 19%;
+    width: 18.5%;
     height: 300px;
     border: 1px solid green;
     position: relative;
+    padding: 0px;
 }
 
 .hero {

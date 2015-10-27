@@ -52,13 +52,13 @@ redis-server
 Once Redis is running, launch a Celery worker:
 
 ```
-foreman start worker
+heroku local worker
 ```
 
 Next, launch the replay parser web server:
 
 ```
-foreman start web
+heroku local web
 ```
 
 If you visit `http://localhost:5000` with your browser, the app will now be running. If you're running inside a virtual machine like I suggested, only the browser inside the VM will resolve localhost. It is possible to access the server from your host computer by using `ifconfig` to find the VM's ip address and typing `[ip]:5000` into the host's browser's address bar.

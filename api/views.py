@@ -87,14 +87,16 @@ def debug(request):
                 savedReplayFile.write(chunk)
             savedReplayFileName = savedReplayFile.name
             savedReplayFile.close()
-            fieldNamesToParse = ['RawReplayDetails',]
-#            for name in allFieldNames:
+            fieldNamesToParse = []
+            for name in allFieldNames:
+                if name == 'RawReplayDetails':
+                    fieldNamesToParse.append(name)
 #                if bool(request.POST.get(name, False)):
 #                    fieldNamesToParse.append(name)
             asyncResult = LocallyStoredReplayParsingTask.delay(savedReplayFileName, fieldNamesToParse)
-            content = json.dumps({
-                'result_url': (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id),
-            })
+#            content = json.dumps({
+#                'result_url': (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id),
+#            })
             Result = {'status': 'Successfully uploaded', 'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id, 'url_text': 'Proceed to result',}
             Result_html = 'proceed.html'
 #        ^_^

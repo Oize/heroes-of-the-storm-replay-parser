@@ -2,12 +2,14 @@
 <html>
     <head>
 	    {% load staticfiles %}
+	    {% load hots_extras %}
 	    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/heroes&bgs.css' %}" />
         <meta charset="utf-8">
         <title>Match_results</title>   
     </head>
 
-    <body>
+    <body class="{{ mapname|getname }}">
         <div id="logo">
             <div id="heroes_logo">
                 <a href="../"><img src="{% static 'images/heroes_logo.png' %}"/></a>
@@ -17,32 +19,19 @@
                 <h1>ARMORY</h1>
             </div>
         </div>
-        {% with hero0='0' hero1='1' hero2='2' hero3='3' hero4='4' hero5='5' hero6='6' hero7='7' hero8='8' hero9='9' %}
-        {% if mapname in maplist %}
-            {% with hero0=players.0.m_hero.utf8 hero1=players.1.m_hero.utf8 hero2=players.2.m_hero.utf8 hero3=players.3.m_hero.utf8 hero4=players.4.m_hero.utf8 hero5=players.5.m_hero.utf8 hero6=players.6.m_hero.utr8 hero7=players.7.m_hero.utf8 hero8=players.8.m_hero.utf8 hero9=players.9.m_hero.utf8 bg=mapname %}
-            {% endwith %}
-        {% else %}
-            {% with hero0= hero1= hero2= hero3= hero4= hero5= hero6= hero7= hero8= hero9= %}
-            
-            {% endwith %}
-        {% endif %}
         <div class="form">
             <h1 class="mapname">{{ mapname }}</h1>
-            <ul class="team1"> <h3>Team 1</h3>
-                <li><p class="hero" class="{{ hero0 }}">{{ players.0.m_hero.utf8 }}</p><p class="name">{{ players.0.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.1.m_hero.utf8 }}</p><p class="name">{{ players.1.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.2.m_hero.utf8 }}</p><p class="name">{{ players.2.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.3.m_hero.utf8 }}</p><p class="name">{{ players.3.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.4.m_hero.utf8 }}</p><p class="name">{{ players.4.m_name.utf8 }}</p></li>
+            <ul class="team1"> <h2>{{ team1 }}</h2>
+            {% for hero in herolist %}
+                {% ifequal hero.id 4 %}
+                    <li><div class="{{ hero.name|getname }}"></div><p class="hero"><b>{{ hero.replayname }}</b></p><p class="name"><b>{{ hero.player }}</b></p></li>
             </ul>
-            <ul class="team2"> <h3>Team 2</h3>
-                <li><p class="hero">{{ players.5.m_hero.utf8 }}</p><p class="name">{{ players.5.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.6.m_hero.utf8 }}</p><p class="name">{{ players.6.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.7.m_hero.utf8 }}</p><p class="name">{{ players.7.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.8.m_hero.utf8 }}</p><p class="name">{{ players.8.m_name.utf8 }}</p></li>
-                <li><p class="hero">{{ players.9.m_hero.utf8 }}</p><p class="name">{{ players.9.m_name.utf8 }}</p></li>
+            <ul class="team2"> <h2>{{ team2 }}</h2>
+                {% else %}
+                    <li><div class="{{ hero.name|getname }}"></div><p class="hero"><b>{{ hero.replayname }}</b></p><p class="name"><b>{{ hero.player }}</b></p></li>
+                {% endifequal %}
+            {% endfor %}
             </ul>
         </div>
-        {% endwith %}
     </body>
 </html>

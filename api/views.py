@@ -99,8 +99,6 @@ def debug(request):
             Result_html = 'proceed.html'
 #        ^_^
         return render_to_response('response/' + Result_html, Result)
-	    #return HttpResponse('<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
-	    #return HttpResponse('<link rel="stylesheet" type="text/css" href="../static/css/proceed.css" />' + '<a href="' + (request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id) + '">Proceed to results</a>', content_type="html")
         #return HttpResponse(content, content_type="application/json")
 
     return render(request, 'api/file-upload.html', {'all_field_names': allFieldNames})
@@ -113,10 +111,21 @@ def getProcessedReplayResult(request):
     if (result.status == 'SUCCESS'):
         mapname = result.get()['raw']['details']['m_title']['utf8']
         players = result.get()['raw']['details']['m_playerList']
-        namelist = [hero['name'] for hero in heroes]
-        maplist = [map['name'] for map in battlegrounds]
+        herolist = []
+        for player in players:
+           for hero in heroes:
+                if (player['m_hero']['utf8'] == hero['name']) or (player['m_hero']['utf8'] == hero['name_cyr']):
+                    herolist.append({'id': player['m_workingSetSlotId'], 'name': hero['name'], 'replayname': player['m_hero']['utf8'], 'player': player['m_name']['utf8']})
+        if players[0]['m_result'] == 1:
+            team1 = 'Victory'
+            team2 = 'Defeat'
+        else:
+            team1 = 'Defeat'
+            team2 = 'Victory'            
+#        herolist = [{'name': hero['name'], 'replayname': player['m_hero']['utf8'], 'player': player['m_name']['utf8']} for hero in heroes for player in players if (player['m_hero']['utf8'] == hero['name']) or (player['m_hero']['utf8'] == hero['name_cyr'])]
+        bglist = [bg['name'] for bg in battlegrounds]
         #indentValue = int(request.GET.get('indent')) if request.GET.has_key('indent') else None
-        return render_to_response('response/result.html' ,{'mapname': mapname, 'players': players, 'heroes': heroes, 'battlegrounds': battlegrounds, 'namelist': namelist, 'maplist': maplist})
+        return render_to_response('response/result.html' ,{'mapname': mapname, 'herolist': herolist, 'players': players, 'team1': team1, 'team2': team2, })
         #return HttpResponse(json.dumps({'status':'SUCCESS','data':result.get()}, indent=int(request.GET.get('indent')) if request.GET.has_key('indent') else None), content_type="application/json")
     return HttpResponse(json.dumps({'status':'PENDING'}), content_type="application/json")
 

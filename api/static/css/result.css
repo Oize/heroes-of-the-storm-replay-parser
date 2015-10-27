@@ -95,11 +95,11 @@ body {
     margin-left: -50px;
     padding: 0px;
     float: left;
-    width: 55%;
-    border: 1px solid red;
+    width: 52%;
+    text-align: right;
 }
 
-.team1 h3 {
+.team1 h2 {
     text-align: center;
 }
 
@@ -107,19 +107,18 @@ body {
     margin-right: -50px;
     padding: 0px;
     float: right;
-    width: 55%;
-    border: 1px solid red;
+    width: 52%;
+    text-align: left;
 }
 
-.team2 h3 {
+.team2 h2 {
     text-align: center;
 }
 
 li {
     display: inline-block;
     width: 18.5%;
-    height: 300px;
-    border: 1px solid green;
+    height: 40vh;
     position: relative;
     padding: 0px;
 }
@@ -131,7 +130,6 @@ li {
 }
 
 .name {
-    display: block;
     position: absolute;
     bottom: 0;
     text-align: center;

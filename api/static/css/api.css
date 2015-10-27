@@ -12,6 +12,11 @@ html {
 }
 
 @font-face {
+    font-family: Exo2Regular;
+    src: url("../fonts/exo2-regular.ttf");
+}
+
+@font-face {
     font-family: ExoBold;
     src: url("../fonts/exo-bold.ttf");
 }
@@ -43,6 +48,10 @@ html {
 
 input {
     font-family: ExoRegular;
+}
+
+#file {
+    font-family: Exo2Regular;
 }
 
 h3 {

@@ -1,0 +1,591 @@
+.rehgar {
+    background: url(../images/heroes/rehgar.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.artanis {
+    background: url(../images/heroes/artanis.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.ltmorales {
+    background: url(../images/heroes/ltmorales.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.abathur {
+    background: url(../images/heroes/abathur.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.arthas {
+    background: url(../images/heroes/arthas.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.gazlowe {
+    background: url(../images/heroes/gazlowe.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 30%);
+}
+
+.jaina {
+    background: url(../images/heroes/jaina.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.malfurion {
+    background: url(../images/heroes/malfurion.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.muradin {
+    background: url(../images/heroes/muradin.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.zeratul {
+    background: url(../images/heroes/zeratul.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.tyrande {
+    background: url(../images/heroes/tyrande.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.raynor {
+    background: url(../images/heroes/raynor.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.azmodan {
+    background: url(../images/heroes/azmodan.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.lili {
+    background: url(../images/heroes/lili.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.johanna {
+    background: url(../images/heroes/johanna.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.kerrigan {
+    background: url(../images/heroes/kerrigan.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+
+.sgthammer {
+    background: url(../images/heroes/sgthammer.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.zagara {
+    background: url(../images/heroes/zagara.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.brightwing {
+    background: url(../images/heroes/brightwing.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+	z-index: 43;
+}
+
+.chen {
+    background: url(../images/heroes/chen.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 65%);
+}
+
+.illidan {
+    background: url(../images/heroes/illidan.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.kharazim {
+    background: url(../images/heroes/kharazim.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.diablo {
+    background: url(../images/heroes/diablo.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.leoric {
+    background: url(../images/heroes/leoric.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.sylvanas {
+    background: url(../images/heroes/sylvanas.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.etc {
+    background: url(../images/heroes/etc.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.rexxar {
+    background: url(../images/heroes/rexxar.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.falstad {
+    background: url(../images/heroes/falstad.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.tassadar {
+    background: url(../images/heroes/tassadar.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.stitches {
+    background: url(../images/heroes/stitches.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.thebutcher {
+    background: url(../images/heroes/thebutcher.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.thelostvikings {
+    background: url(../images/heroes/thelostvikings.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 40%);
+	z-index: 40;
+}
+
+.tyrael {
+    background: url(../images/heroes/tyrael.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.nova {
+    background: url(../images/heroes/nova.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.uther {
+    background: url(../images/heroes/uther.png) no-repeat 58% center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.thrall {
+    background: url(../images/heroes/thrall.png) no-repeat 58% center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.nazeebo {
+    background: url(../images/heroes/nazeebo.png) no-repeat 58% center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.murky {
+    background: url(../images/heroes/murky.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.kaelthas {
+    background: url(../images/heroes/kaelthas.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.valla {
+    background: url(../images/heroes/valla.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+	z-index: 42;
+}
+
+.anubarak {
+    background: url(../images/heroes/anubarak.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.sonya {
+    background: url(../images/heroes/sonya.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.tychus {
+    background: url(../images/heroes/tychus.png) no-repeat center center; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: 100%;
+    position: absolute;
+	width: 26vw;
+	left: calc(-13vw + 20%);
+}
+
+.battlefieldofeternity {
+    background: url(../images/battlegrounds/battlefieldofeternity.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.blackheartsbay {
+    background: url(../images/battlegrounds/blackheartsbay.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.cursedhollow {
+    background: url(../images/battlegrounds/cursedhollow.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.dragonshire {
+    background: url(../images/battlegrounds/dragonshire.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.gardenofterror {
+    background: url(../images/battlegrounds/gardenofterror.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.hauntedmines {
+    background: url(../images/battlegrounds/hauntedmines.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infernalshrines {
+    background: url(../images/battlegrounds/infernalshrines.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.skytemple {
+    background: url(../images/battlegrounds/skytemple.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tombofthespiderqueen {
+    background: url(../images/battlegrounds/tombofthespiderqueen.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

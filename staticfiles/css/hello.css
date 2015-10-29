@@ -32,7 +32,7 @@ html {
 }
 
 #logo {
-    position: fixed;
+    position: relative;
     text-align: center;
     z-index: 1;
 }
@@ -61,35 +61,29 @@ html {
 }
 
 #text_logo h1 {
-    color: #143e85;
+    color: /*#3B204B*/#143e85;
     margin-top: -8px;
     font-family: ExoBold;
     font-size: 2.5em;
-    -webkit-text-stroke: 1px #B4E4ED;
+    -webkit-text-stroke: 2px #00C0FF;
 }
 
 .form {
-    position: fixed;
-    clear: both;
-    max-width: 25%;
-    width: 15em;
-    height: auto;
-    background: rgba(59, 32, 75, 0.5);   
-    border: 2px solid #143e85;
+    position: relative;
+    background: rgba(59, 32, 75, 0.7);   
+    border: 2px solid #00C0FF;
     border-radius: 5px;
     text-align: center;
-    top: 25em;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 2em;
+    padding: 2em;
 }
 
-.form h2 {
-    color: #143e85;
-    font-family: ExoBold;
+.form h3 {
+    color: #00C0FF;
+    font-family: ExoRegular;
 }
 
 .form img {
-    position: relative;
     height: 4em;
-    width: 4em;
+    width: 4em
 }

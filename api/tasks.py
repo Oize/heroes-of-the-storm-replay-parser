@@ -42,8 +42,8 @@ def LocallyStoredReplayParsingTask(fileName, debug):
     return retval
 
 @shared_task
-def S3StoredReplayParsingTask(keyName):
-
+def S3StoredReplayParsingTask(keyName, debug):
+    log.info('File name='+fileName+', debug='+str(debug))
     splitKey = keyName.split('/')
     if len(splitKey) != 2:
         raise ValueError("keyName must be of the form: <folder>/<file>")
@@ -60,7 +60,7 @@ def S3StoredReplayParsingTask(keyName):
 
     # todo: do we need to read this to an on-disk temp file to save memory?
     replayFile = cStringIO.StringIO(k.get_contents_as_string())
-    retval = AnalyzeReplayFile(replayFile, ['RawReplayDetails',])
+    retval = AnalyzeReplayFile(replayFile, debug)
     # todo: close the original key?
 
     resultKey = Key(bucket)
@@ -82,8 +82,9 @@ def S3StoredReplayParsingTask(keyName):
 
     log.info("Result: " + s3UrlToResultKey);
     log.info("Finished reading from StormReplay. Cleaning up.")
-    return {
-        'url': s3UrlToResultKey
-    }
+#    return {
+#        'url': s3UrlToResultKey
+#    }
+    return retval
 
 

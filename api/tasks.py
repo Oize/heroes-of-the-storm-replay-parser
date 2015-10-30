@@ -60,7 +60,7 @@ def S3StoredReplayParsingTask(keyName):
 
     # todo: do we need to read this to an on-disk temp file to save memory?
     replayFile = cStringIO.StringIO(k.get_contents_as_string())
-    retval = AnalyzeReplayFile(replayFile)
+    retval = AnalyzeReplayFile(replayFile, ['RawReplayDetails',])
     # todo: close the original key?
 
     resultKey = Key(bucket)

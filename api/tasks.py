@@ -43,7 +43,7 @@ def LocallyStoredReplayParsingTask(fileName, debug):
 
 @shared_task
 def S3StoredReplayParsingTask(keyName, debug):
-    log.info('File name='+fileName+', debug='+str(debug))
+    log.info('File name='+keyName+', debug='+str(debug))
     splitKey = keyName.split('/')
     if len(splitKey) != 2:
         raise ValueError("keyName must be of the form: <folder>/<file>")

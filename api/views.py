@@ -82,7 +82,8 @@ def debug(request):
             Result_html = 'back.html'
         else:
             replayFile = request.FILES.get('file')
-            savedReplayFile = NamedTemporaryFile(prefix=str(os.path.dirname(os.path.abspath(__file__))), delete=False)
+            tmpfiledir = os.path.dirname(os.path.abspath(__file__)).encode('utf-8')
+            savedReplayFile = NamedTemporaryFile(prefix=tmpfiledir, delete=False)
             for chunk in replayFile.chunks():
                 savedReplayFile.write(chunk)
             savedReplayFileName = savedReplayFile.name

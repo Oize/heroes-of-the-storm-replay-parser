@@ -7,6 +7,15 @@
         <title>Armory of the Storm. Replay upload</title>   
     </head>
     <body>
+        <div id="logo">
+            <div id="heroes_logo">
+                <a href="./"><img src="{% static 'images/heroes_logo.png' %}"/></a>
+            </div>
+
+            <div id="text_logo">
+                <h1>ARMORY</h1>
+            </div>
+        </div>
         <div class="form">
         	<h3>Select a StormReplay file</h3>
             <form action="https://{{ s3.bucket }}.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
@@ -18,7 +27,7 @@
                 <input type="hidden" name="signature" value="{{ s3.signature }}" />
                 <input type="hidden" name="Content-Type" value="{{ s3.Content_Type }}" />
                 <p><input type="file" id="file" name="file" /></p>
-                <p><input type="submit" value="Upload to S3" /></p>
+                <p><input type="submit" value="Upload" /></p>
             </form>
         </div>
     </body>

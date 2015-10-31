@@ -1,18 +1,26 @@
-{% load staticfiles %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/hello.css' %}" />
+<!DOCTYPE html>
+<html>
+    <head>
+	    {% load staticfiles %}
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/hello.css' %}" />
+        <meta charset="utf-8">
+        <title>Armory of the Storm</title>   
+    </head>
+    <body>
+        <div id="logo">
+            <div id="heroes_logo">
+                <a href="./"><img src="{% static 'images/heroes_logo.png' %}"/></a>
+            </div>
 
-<div id="logo">
-    <div id="heroes_logo">
-        <a href="./"><img src="{% static 'images/heroes_logo.png' %}"/></a>
-    </div>
+            <div id="text_logo">
+                <h1>ARMORY</h1>
+            </div>
+        </div>
 
-    <div id="text_logo">
-        <h1>ARMORY</h1>
-    </div>
-</div>
+        <div class="form">
+            <h3>Upload your replay</h3>
 
-<div class="form">
-    <h3>Upload your replay</h3>
-
-    <p><a href="./api/upload"><img src="{% static 'images/load.png' %}"/></a></p>
-</div>
+            <p><a href="./api/upload"><img src="{% static 'images/load.png' %}"/></a></p>
+        </div>
+    </body>
+</html>

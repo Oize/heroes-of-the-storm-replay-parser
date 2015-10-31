@@ -77,7 +77,7 @@ def processReplayThatWasUploadedToS3(request):
 #        'result_url': request.build_absolute_uri('result?id='+asyncResult.id)
 #    })
 #    return HttpResponse(content, content_type="application/json")
-    Result = {'status': 'Successfully uploaded', 'result_url': request.build_absolute_uri('/result?id=' + asyncResult.id), 'url_text': 'Proceed to result',}
+    Result = {'status': 'Successfully uploaded', 'result_url': request.META.get('HTTP_REFERER') + '/result?id=' + asyncResult.id, 'url_text': 'Proceed to result',}
     Result_html = 'proceed.html'
 #        ^_^
     return render_to_response('response/' + Result_html, Result)

@@ -73,10 +73,14 @@ def processReplayThatWasUploadedToS3(request):
     bucket = request.GET.get('bucket')
     # todo: do we need to validate bucket here?
     asyncResult = S3StoredReplayParsingTask.delay(key, fieldNamesToParse)
-    content = json.dumps({
-        'result_url': request.build_absolute_uri('result?id='+asyncResult.id)
-    })
-    return HttpResponse(content, content_type="application/json")
+#    content = json.dumps({
+#        'result_url': request.build_absolute_uri('result?id='+asyncResult.id)
+#    })
+#    return HttpResponse(content, content_type="application/json")
+    Result = {'status': 'Successfully uploaded', 'result_url': request.build_absolute_uri('/result?id=' + asyncResult.id), 'url_text': 'Proceed to result',}
+    Result_html = 'proceed.html'
+#        ^_^
+    return render_to_response('response/' + Result_html, Result)
 
 def debug(request):
     allFieldNames = StormReplayAnalyzer.getAllFieldMappingNames()

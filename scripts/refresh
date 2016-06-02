@@ -1,3 +1,4 @@
 find ./api -name '*.pyc' -exec rm {} \;
 find ./stormreplay -name '*.pyc' -exec rm {} \;
 find ./s2protocol -name '*.pyc' -exec rm {} \;
+find ./heroprotocol -name '*.pyc' -exec rm {} \;

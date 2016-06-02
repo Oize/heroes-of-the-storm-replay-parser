@@ -1,6 +1,6 @@
-from s2protocol.mpyq import mpyq
-from s2protocol import protocol15405
-from s2protocol.decoders import *
+from heroprotocol.mpyq import mpyq
+from heroprotocol import protocol29406
+from heroprotocol.decoders import *
 import os
 
 # todo: get this logger from elsewhere
@@ -24,10 +24,10 @@ class StormReplayReader:
         # The replayFile can be either the name of a file or any object that has a 'read()' method.
         self.mpq = mpyq.MPQArchive(replayFile)
 
-        self.buildStormReplay = protocol15405.decode_replay_header(self.mpq.header['user_data_header']['content'])['m_version']['m_baseBuild']
+        self.buildStormReplay = protocol29406.decode_replay_header(self.mpq.header['user_data_header']['content'])['m_version']['m_baseBuild']
 
         try:
-            self.protocol = __import__('s2protocol' + '.protocol%s' % self.buildStormReplay, fromlist=['protocol2'])
+            self.protocol = __import__('heroprotocol' + '.protocol%s' % self.buildStormReplay, fromlist=['protocol2'])
         except ImportError:
             raise Exception('Unsupported StormReplay protocol build number: %i' % self.buildStormReplay)
 
